@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/spline-sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ee56d8f4b5.js" crossorigin="anonymous"></script>
+    <title>Aimee Rose</title>
+</head>
+<body>
+<div id="home">
+    <div class="container">
+        <nav>
+        <ul id="sidemenu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#socials">SOCIALS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        </nav>
+        <div class="home-text">
+            <h1>Aimee<span> Rose</span></h1>
+            <p>CONTENT CREATOR</p>
+        </div>
+    </div>
+</div>
+
+<!--------------about--------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-me">
+                <h4 class="title">About Me</h4>
+            </div>
+
+            <div class="talent">
+                <p id="typing-text">Welcome to the rhythmic realm of my passion! I'm Aimee Rose, 
+                a dedicated content creator whose heart beats to the rhythm 
+                of dance. With every graceful movement and electrifying step, 
+                I aim to express a kaleidoscope of emotions, stories, and experiences. 
+                From the pulsating energy of hip-hop to the fluidity of contemporary, 
+                each dance style becomes a canvas through which I paint tales of joy, 
+                resilience, and self-expression. Join me in this exhilarating exploration 
+                of movement and music as we journey through the highs and lows of life, 
+                finding solace, inspiration, and connection in the universal language of 
+                dance. Together, let's sway, twirl, and leap into a world where every beat 
+                is a celebration of the human spirit. Welcome to the dance floor of endless 
+                possibilities!</p>
+            </div>
+
+        </div>
+        <a href="" class="pindot">Know More</a>
+    </div>
+</div>
+
+<!--------------socials--------------->
+<div id="socials">
+    <div class="container">
+        <h1 class="sub-title">My Social Media</h1>
+        <div class="social-list">
+            <div class="social">
+                <img src="Images/facebook.png">
+                <div class="layer">
+                    <h3>Facebook</h3>
+                    
+                    <a href="https://web.facebook.com/aimeefernandoballatan"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+            <div class="social">
+                <img src="Images/youtube.png">
+                <div class="layer">
+                    <h3>YouTube</h3>
+                    
+                    <a href="https://www.youtube.com/channel/UC04xF88SEmEO_NMnltLu3iA"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="social">
+                <img src="Images/tiktok.png">
+                <div class="layer">
+                    <h3>Tiktok</h3>
+                    
+                    <a href="https://www.tiktok.com/@itsaymii"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="button">See More</a>
+    </div>
+</div>
+
+<!--------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="contactme">
+            <h1 class="title">Contact Me</h1>
+        </div>
+        <div class="contact">
+            <p><i class="fa-solid fa-paper-plane"></i>  aimeeballatan22@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>  +639939509044</p>
+        </div>
+        
+    </div>
+</div>
+
+<!--------------copyright--------------->
+<div id="copyright">
+    <div class="container">
+        <div class="copy">
+            <p>© 2024 by Aimee Rose. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+const text = document.getElementById("typing-text").textContent;
+const typingTextElement = document.getElementById("typing-text");
+typingTextElement.textContent = ''; // Clear the content
+
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        typingTextElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, Math.floor(Math.random() * 30) + 0); // Adjust typing speed here
+    }
+}
+
+typeWriter();
+
+</script>
+</body>
+</html>
